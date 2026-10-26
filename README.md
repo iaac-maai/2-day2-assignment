@@ -1,4 +1,4 @@
-r"""# Predicting House Prices in King County
+# Predicting House Prices in King County
 
 **Team:** 
 - Karthikeyan Saravanan
