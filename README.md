@@ -7,7 +7,7 @@
 - Samiha Abeda Nur
   
 **Course:** AI Methods I – Day 2: Supervised learning (IAAC MaAI 2026/27)  
-**Model on Hugging Face:**
+**Model on Hugging Face:** https://huggingface.co/iaac-maai/day2-group2-housesales 
 
 ## Use case
 This project develops a machine learning model to predict residential property prices in King County, Washington, based on housing characteristics and location. 
@@ -68,6 +68,18 @@ Open `notebook/supervised_learning.ipynb`, select the `.venv` kernel and run all
 Gradient Boosting achieved the highest cross-validation performance, with an R² of approximately 0.886 and an estimated typical prediction error of 12.22%. All trained models substantially outperformed the baseline.
 
 ![Model comparison](figures/01_model_comparison.png)
+
+### Final model on the held-out test set (4,147 sales)
+Selected model: default Histogram Gradient Boosting (chosen with training CV only).
+
+| Model | MAE (USD) | RMSE (USD) | R² (USD) | MAPE (%) | Within ±20% (%) | Overestimated (%) |
+|---|---|---|---|---|---|---|
+| Baseline (mean) | 196,281 | 284,045 | −0.04 | 40.50 | 31.83 | 51.94 |
+| **Gradient Boosting** | **60,201** | **98,384** | **0.88** | **11.59** | **83.70** | **50.74** |
+
+Test R² on log10-price: 0.886 (matches CV 0.886, so no sign of overfitting). Test MAE is ~69% lower than the baseline.
+
+![Final evaluation](figures/05_final_evaluation.png)
 
 ## Limitations
 - The dataset contains historical transactions from 2014–2015, which may not represent current real estate market conditions.
