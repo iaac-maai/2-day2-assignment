@@ -17,11 +17,11 @@ metrics:
 
 This model predicts residential property sale prices based on physical characteristics, construction quality, and geographic information. It is a scikit-learn pipeline combining preprocessing with a Histogram Gradient Boosting Regressor, trained on historical housing sales in King County, Washington, USA. The model is designed to support real estate professionals, buyers, and investors in estimating property values. It was built as a course assignment for AI Methods I (IAAC MaAI 2026/27).
 
-- **GitHub repository (full pipeline):** https://github.com/iaac-maai/<2-day2-assignment>
+- **GitHub repository (full pipeline):** https://github.com/iaac-maai/2-day2-assignment
 **Team 2:** 
 - Karthikeyan Saravanan
-- Emmanuel Marquez
-- Bars babila
+- Emmanuel Márquez Granados
+- Bars Babila
 - Samiha Abeda Nur
 
 ## Intended use
@@ -158,10 +158,10 @@ print(model.predict(example))
 
 ## Reproducibility
 
-The full pipeline (data loading, cleaning, training, evaluation) is in the GitHub repository: https://github.com/iaac-maai/<2-day2-assignment>. Run `notebook/supervised_learning.ipynb` with the packages in `requirements.txt`.
+The full pipeline (data loading, cleaning, training, evaluation) is in the GitHub repository: https://github.com/iaac-maai/2-day2-assignment. Run `notebook/supervised_learning.ipynb` with the packages in `requirements.txt`.
 
 ## Authors and licence
 
-Karthikeyan Saravanan, Emmanuel Marquez, Bars babila, Samiha Abeda Nur. Course assignment for **AI Methods I: Machine Learning for the Built Environment**, IAAC MaAI 2026/27.
+Karthikeyan Saravanan, Emmanuel Márquez Granados, Bars Babila, Samiha Abeda Nur. Course assignment for **AI Methods I: Machine Learning for the Built Environment**, IAAC MaAI 2026/27.
 
 Model released under the MIT License. The training data is subject to its own licence: ...

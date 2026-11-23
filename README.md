@@ -2,8 +2,8 @@
 
 **Team:** 
 - Karthikeyan Saravanan
-- Emmanuel Marquez
-- Bars babila
+- Emmanuel Márquez Granados
+- Bars Babila
 - Samiha Abeda Nur
   
 **Course:** AI Methods I – Day 2: Supervised learning (IAAC MaAI 2026/27)  
@@ -54,16 +54,17 @@ Open `notebook/supervised_learning.ipynb`, select the `.venv` kernel and run all
 - **Models compared:** Dummy Regressor (baseline), Linear Regression, Ridge Regression, K-Nearest Neighbors, Decision Tree, Random Forest, and Histogram Gradient Boosting.
 
 ## Results
-| Model | CV score (mean ± std) | MAE (log10) | Typical error (%) |
-|---|---|---|
-| Baseline (mean) | −0.00 ± 0.00 | 0.17| 47.07 |
-| Linear Regression | −0.85 ± 0.00 | 0.06| 14.45 |
+| Model | CV R² on log10 price (mean ± std) | CV MAE (log10) | Typical error (%) |
+|---|---|---|---|
+| Baseline (mean) | −0.00 ± 0.00 | 0.17 | 47.07 |
+| Linear Regression | 0.85 ± 0.00 | 0.06 | 14.45 |
 | Ridge Regression | 0.85 ± 0.00 | 0.06 | 14.46 |
 | KNN (k=10) | 0.82 ± 0.00 | 0.06 | 15.69 |
 | Decision Tree | 0.81 ± 0.01 | 0.06 | 16.08 |
 | Random Forest | 0.88 ± 0.01 | 0.05 | 12.64 |
-
 | **Gradient Boosting** | **0.89 ± 0.01** | **0.05** | **12.22** |
+
+*All scores from 5-fold GroupKFold cross-validation on the training set only.*
 
 Gradient Boosting achieved the highest cross-validation performance, with an R² of approximately 0.886 and an estimated typical prediction error of 12.22%. All trained models substantially outperformed the baseline.
 
@@ -80,6 +81,10 @@ Selected model: default Histogram Gradient Boosting (chosen with training CV onl
 Test R² on log10-price: 0.886 (matches CV 0.886, so no sign of overfitting). Test MAE is ~69% lower than the baseline.
 
 ![Final evaluation](figures/05_final_evaluation.png)
+
+### Feature importance
+
+![Feature importance](figures/06_house_feature_importance.png)
 
 ## Limitations
 - The dataset contains historical transactions from 2014–2015, which may not represent current real estate market conditions.
